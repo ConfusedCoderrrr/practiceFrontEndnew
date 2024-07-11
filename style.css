@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header .social-icons a img {
+    height: 25px;
+    margin-left: 10px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+
+.hero {
+    position: relative;
+    background-color: rgb(156, 155, 155);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    margin-left: 8%;
+}
+
+.hero .hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, black, grey);
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(156, 155, 155);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.info .info-card {
+    width: 30%;
+    padding: 20px;
+}
+
+.info-card p {
+    text-align: justify;
+}
+
+.services {
+    text-align: center;
+    padding: 20px;
+}
+
+.services .service-card {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.services .service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.main-text {
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 4.5% !important;
+}
+
+.service-card {
+    margin: 10px;
+    padding: 10px;
+}
+
+.service-card h3 {
+    margin-top: 10px;
+}
+
+.service-card p {
+    margin-top: 10px;
+}
+
+.services .service-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info .info-card,
+    .services .service-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
